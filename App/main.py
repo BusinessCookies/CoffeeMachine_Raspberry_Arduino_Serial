@@ -37,7 +37,7 @@ def SerialManagement():
 
                      #and discard all that is in buffer
             i=0
-            InputInfo = b"1"
+            InputInfo[0] = b"1"
             while InputInfo[i] != b"0": #ASCII char 0 as end of receiving datas
                 if i==0:
                     InputInfo[i] = ser.read()
